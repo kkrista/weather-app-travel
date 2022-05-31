@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container" style="max-width: 40rem">
+      <div class="weather-app">
+        <div class="weather-wrapper">
+          <form id="city-form" class="mb-3">
+            <div class="row">
+              <div class="col-md-9">
+                <input
+                  type="text"
+                  id="city-input"
+                  placeholder="City Destination"
+                  class="form-control me-3"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-2">
+                <input
+                  type="submit"
+                  placeholder="Fly to"
+                  value="Search"
+                  button
+                  type="button"
+                  class="btn btn-dark"
+                />
+              </div>
+            </div>
+            <br />
+          </form>
+          <h1> <span id="intro"> Flight to</span> </span><span id="city"> Amsterdam</span></h1>
+        </div>
+        <div class="row">
+          <div class="col-8">
+            <div class="clearfix weather-temperature">
+              <img src="" id="icon" alt="" class="float-left" />
+              <div class="float-left">
+                <strong id="temperature"></strong>
+                <a href="#" class="celcius-temp" class="active">°C | </a>
+                <a href="#" class="fahrenheit-temp">°F </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h2 style="margin-top: 10px; font-size: 14px; font-weight: bold">
+              <span id="current-date"></span>
+              <br />
+              <span id="temp-description"> </span>
+            </h2>
+            <ul>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span>km/h</li>
+            </ul>
+          </div>
+        </div>
+        <br />
+        <div class="weather-forecast" id="forecast" style="font-weight: bold;"></div>
+        <br />
+        <div class="footer">
+          <a
+            href="https://github.com/kkrista/weather-app-travel"
+            style="color: gray"
+            >Open source code
+          </a>
+          by Krista-Mari Katajisto
+        </div>
+      </div>
+    </div>
+    <script src="src/app.js"></script>
+  </body>
+</html>
